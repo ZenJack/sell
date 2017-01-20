@@ -1,6 +1,7 @@
 # sell
 
-> A Vue.js project
+> 一个使用 ``vue2.x + vue-router2.x + vue-resource1.x + better-scroll0.x`` 的 ``WebApp`` 项目。
+
 
 ## Build Setup
 
