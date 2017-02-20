@@ -21,7 +21,6 @@ module.exports = {
     port: 8080,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    // proxyTable: { },
     proxyTable: {
       '/api': {
         target: 'http://192.168.31.227:8088',
