@@ -3,6 +3,7 @@ var config = require('../config')
 if (!process.env.NODE_ENV) process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 var path = require('path')
 var express = require('express')
+var bodyParser = require('body-parser')
 var webpack = require('webpack')
 var opn = require('opn')
 var proxyMiddleware = require('http-proxy-middleware')
@@ -44,6 +45,16 @@ apiRoutes.get('/ratings', function (req, res) {
   })
 })
 
+apiRoutes.post('/test/:id', function (req, res) {
+  console.log(req.method);
+  console.log('params: ' + JSON.stringify(req.params));
+  console.log('query: ' + JSON.stringify(req.query));
+  console.log('body: ' + JSON.stringify(req.body));
+  res.json(JSON.stringify(req.body));
+});
+
+// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use('/api', apiRoutes)
 
 var compiler = webpack(webpackConfig)

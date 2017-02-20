@@ -43,6 +43,18 @@ export default {
         // this.seller = Object.assign({}, this.seller, response.data);
       }
     });
+
+    let body = {
+      name: 'jack',
+      age: 99
+    };
+
+    // this.$http.post('api/test/23', body, {emulateJSON: true}).then(response => {
+    //   console.log('response: ' + response.body);
+    // });
+    this.$http.post('api/test/23?id=100', body).then(response => {
+      console.log('response: ' + response.body);
+    });
   },
   components: {
     'v-header': header
