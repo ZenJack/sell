@@ -43,6 +43,9 @@ export default {
         // this.seller = Object.assign({}, this.seller, response.data);
       }
     });
+    this.$http.post('api/test', {name: 'jack', age: 22}).then(response => {
+      console.log('response: ' + response);
+    });
   },
   components: {
     'v-header': header
