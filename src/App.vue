@@ -13,7 +13,9 @@
       </div>
     </div>
     <keep-alive>
-      <router-view :seller="seller"></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view :seller="seller"></router-view>
+      </transition>
     </keep-alive>
   </div>
 </template>

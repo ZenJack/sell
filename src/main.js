@@ -8,6 +8,8 @@ import goods from './components/goods/goods';
 import seller from './components/seller/seller';
 import ratings from './components/ratings/ratings';
 
+import './assets/css/reset.css';
+
 // 将 vue-router 插件安装到 vue 中
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -43,6 +45,7 @@ const router = new VueRouter({
     不配置路径如：http://localhost/#/ratings
   */
   mode: 'history',
+  base: '/sell/',
   routes
 });
 
